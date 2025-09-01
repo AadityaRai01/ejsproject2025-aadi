@@ -1,0 +1,222 @@
+<%- include('./base/header.ejs')%>
+<!-- <div class="container ">
+    <div class="alert alert-danger text-center mx-5 mt-3">
+        <h4>Signup form</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row rounded border-start border-bottom  border-end border- shadow-lg mx-5  pb-3 "style="background-color: blanchedalmond">
+        <div class="col"></div>
+        <div class="col">
+            <form action="/add/user" method="post">
+                <div>
+                    <label class="form-label">Fast Name</label>
+                    <input type="text" placeholder="FirstName" class="form-control rounded-pill shadow" name="firstName" >
+                </div>
+                <div>
+                    <label class="form-label">Last Name</label>
+                    <input type="text" placeholder="LastName" class="form-control rounded-pill shadow " name="lastName">
+                </div>
+                <div>
+                    <label class="form-label">Email</label>
+                    <input type="email" placeholder="Email" class="form-control rounded-pill shadow" name="email" >
+                </div>
+                <div>
+                    <label class="form-label" >Password</label>
+                    <input type="password" placeholder="Password" class="form-control rounded-pill shadow mb-2" name="password" >
+                </div>
+                <input type="submit" value="Signup" class="btn btn-primary w-100 my-2 rounded-pill shadow-lg">
+                <div>
+                    <a href="/" class="btn btn-danger w-100 my-2 rounded-pill shadow-lg" >Login</a>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+
+    </div>
+</div> -->
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+<div
+  class="container d-flex align-items-center justify-content-center min-vh-100"
+  style="
+    background-image: url('/images/circuits-blue-red-gradient-digit.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  "
+>
+  <div
+    class="row shadow-lg p-3 p-md-4"
+    style="
+      width: 95%;
+      max-width: 900px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    "
+  >
+    <!-- Left Box: Logo + Welcome -->
+    <div
+      class="col-md-6 d-flex flex-column align-items-center justify-content-center rounded-4 mb-3 mb-md-0"
+      style="
+        background: transparent;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+      "
+      onmouseover="this.style.boxShadow='5px 5px 25px rgba(0,0,0,0.25), -5px -5px 25px rgba(255,255,255,0.15)';"
+      onmouseout="this.style.boxShadow='5px 5px 20px rgba(0,0,0,0.2), -5px -5px 20px rgba(255,255,255,0.1)';"
+    >
+      <h2 class="text-light mb-4" style="font-weight: 600; letter-spacing: 1px;">Join Us Today!</h2>
+      <div
+        style="
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          border: 5px solid rgba(255,255,255,0.3);
+          box-shadow: inset 3px 3px 8px rgba(0,0,0,0.1), inset -3px -3px 8px rgba(255,255,255,0.2);
+          overflow: hidden;
+          margin-bottom: 15px;
+        "
+      >
+        <img src="/images/Untitled.png" class="img-fluid rounded-circle" alt="logo" width="140px"/>
+      </div>
+      <p class="text-light" style="font-size: 0.95rem;">
+        Enter your details to create a new account and start your journey with us.
+      </p>
+    </div>
+
+    <!-- Right Box: Signup Form -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <form
+        action="/add/user"
+        method="post"
+        style="
+          background: transparent;
+          backdrop-filter: blur(10px);
+          padding: 30px 25px;
+          border-radius: 20px;
+          width: 100%;
+          max-width: 320px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        "
+      >
+        <!-- First Name -->
+        <div style="margin-bottom: 15px;">
+          <label class="form-label" style="color:#fff; font-weight:500;">First Name</label>
+          <input type="text" placeholder="First Name" name="firstName"
+            style="
+              width: 100%;
+              padding: 12px;
+              border-radius: 5px;
+              border: none;
+              background: rgba(255,255,255,0.25);
+              color: #fff;
+              font-size: 0.95rem;
+              box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.background='rgba(255,255,255,0.45)'; this.style.boxShadow='0 0 8px rgba(255,255,255,0.5)';"
+            onmouseout="this.style.background='rgba(255,255,255,0.25)'; this.style.boxShadow='inset 2px 2px 5px rgba(0,0,0,0.1)';"
+          />
+        </div>
+
+        <!-- Last Name -->
+        <div style="margin-bottom: 15px;">
+          <label class="form-label" style="color:#fff; font-weight:500;">Last Name</label>
+          <input type="text" placeholder="Last Name" name="lastName"
+            style="
+              width: 100%;
+              padding: 12px;
+              border-radius: 5px;
+              border: none;
+              background: rgba(255,255,255,0.25);
+              color: #fff;
+              font-size: 0.95rem;
+              box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.background='rgba(255,255,255,0.45)'; this.style.boxShadow='0 0 8px rgba(255,255,255,0.5)';"
+            onmouseout="this.style.background='rgba(255,255,255,0.25)'; this.style.boxShadow='inset 2px 2px 5px rgba(0,0,0,0.1)';"
+          />
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom: 15px;">
+          <label class="form-label" style="color:#fff; font-weight:500;">Email</label>
+          <input type="email" placeholder="Email" name="email"
+            style="
+              width: 100%;
+              padding: 12px;
+              border-radius: 5px;
+              border: none;
+              background: rgba(255,255,255,0.25);
+              color: #fff;
+              font-size: 0.95rem;
+              box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.background='rgba(255,255,255,0.45)'; this.style.boxShadow='0 0 8px rgba(255,255,255,0.5)';"
+            onmouseout="this.style.background='rgba(255,255,255,0.25)'; this.style.boxShadow='inset 2px 2px 5px rgba(0,0,0,0.1)';"
+          />
+        </div>
+
+        <!-- Password -->
+        <div style="margin-bottom: 20px;">
+          <label class="form-label" style="color:#fff; font-weight:500;">Password</label>
+          <input type="password" placeholder="Password" name="password"
+            style="
+              width: 100%;
+              padding: 12px;
+              border-radius: 5px;
+              border: none;
+              background: rgba(255,255,255,0.25);
+              color: #fff;
+              font-size: 0.95rem;
+              box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.background='rgba(255,255,255,0.45)'; this.style.boxShadow='0 0 8px rgba(255,255,255,0.5)';"
+            onmouseout="this.style.background='rgba(255,255,255,0.25)'; this.style.boxShadow='inset 2px 2px 5px rgba(0,0,0,0.1)';"
+          />
+        </div>
+
+        <!-- Signup Button -->
+        <input type="submit" value="Signup"
+          style="
+            width: 100%;
+            padding: 12px;
+            border-radius: 50px;
+            border: .5px solid grey ;
+            background: transparent;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+          "
+          onmouseover="this.style.boxShadow='0 6px 12px rgba(0,0,0,0.35)'; this.style.transform='translateY(-2px)';  this.style.background='linear-gradient(90deg, #e4273754, #34147057)'; this.style.border='none';"
+          onmouseout="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.25)'; this.style.transform='translateY(0)'; this.style.background='transparent'; this.style.border='.5px solid grey ';"
+        />
+
+        <!-- Login Link -->
+        <p style="text-align:center; color:#fff; font-size:0.9rem; margin-top:10px;">
+          Already have an account? 
+          <a href="/" style="color:#4facfe; text-decoration: underline;">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<%- include('./base/footer.ejs')%>
+
+
+

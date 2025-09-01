@@ -1,0 +1,52 @@
+<div class="container">
+ <div class="alert alert-danger text-center mx-5 mt-3">
+        <h4>Student List</h4>
+</div>
+<div class="container">
+    <table class="table text-center">
+        <thead>
+            <tr class="alert alert-primary">
+                <th> Student Image </th>
+                <th> RollNo</th>
+                <th> Student Name</th>
+                <th> Father Name</th>
+                <th>E-mail</th>
+                <th> Course</th>
+                <th> Branch</th>
+                <th> Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    
+                    <td>  <img src="<%= student.studentImage %>" alt="" height="60px" width="50px"> </td>
+                    
+                    <td>
+                        <%= student.rollNo %>
+                    </td>
+                    <td>
+                        <%= student.studentName %>
+                    </td>
+                    <td>
+                        <%= student.fatherName %>
+                    </td>
+                    <td>
+                        <%= student.email %>
+                    </td>
+
+                    <td>
+                        <%= student.course %>
+                    </td>
+                    <td>
+                        <%= student.branch %>
+                    </td>
+                    
+
+                    <td>
+                        <a href="/edit/student/page/<%= student._id %>" class="btn btn-warning"><i class="ri-edit-2-line"style="color: white;"></i></a>
+                        <a href="/delete/student/<%=  student._id %>" class="btn btn-danger"><i class="ri-delete-bin-line" style="color: white;"></i></a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>

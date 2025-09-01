@@ -1,0 +1,153 @@
+<%- include('./base/header.ejs') %>
+ <%- include('./base/nav.ejs') %>
+<div class="container">
+  <div class="alert alert-dark text-center mx-5 mt-3">
+    <h4>Add Student Details</h4>
+  </div>
+</div>
+<div class="container">
+  <div
+    class="row rounded border-start border-bottom border-end border- shadow-lg mx-5 pb-3"
+    style="
+      background: linear-gradient(135deg, rgba(100, 148, 237, 0.329), rgba(220, 20, 60, 0.301));
+    "
+  >
+    <div class="col"></div>
+    <div class="col">
+      <form action="/add/student" method="post" enctype="multipart/form-data">
+        <div>
+          <label class="form-label">Rollno</label>
+          <input
+            type="text"
+            placeholder="Rollno"
+            class="form-control rounded-4 shadow"
+            name="rollNo"
+          />
+        </div>
+        <div>
+          <label class="form-label">studentName</label>
+          <input
+            type="text"
+            placeholder="studentName"
+            class="form-control rounded-4 shadow"
+            name="studentName"
+          />
+        </div>
+        <div>
+          <label class="form-label">fatherName</label>
+          <input
+            type="text"
+            placeholder="fatherName"
+            class="form-control rounded-4 shadow"
+            name="fatherName"
+          />
+        </div>
+        <div>
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            placeholder="Email"
+            class="form-control rounded-4 shadow"
+            name="email"
+          />
+        </div>
+        <div>
+          <!-- <label class="form-label">course</label>
+                    <input type="text" placeholder="course" class="form-control rounded-4 shadow" name="course" >
+                </div>
+                <div>
+                    <label class="form-label" >Branch</label>
+                    <input type="text" placeholder="branch" class="form-control rounded-4 shadow mb-2" name="branch" >
+                </div>
+                <div>
+                    <label class="form-label" >addmission year</label>
+                    <input type="text" placeholder="branch" class="form-control rounded-4 shadow mb-2" name="yearOfAdmission" > -->
+
+          <!-- dropdown code strt -->
+          <div>
+            <!-- Course Dropdown -->
+            <label class="form-label">Course</label>
+            <select
+              class="form-control rounded-4 shadow"
+              name="course"
+              id="course"
+              onchange="showBranches(this.value)"
+            >
+              <option value="">-- Select Course --</option>
+              <option value="btech">B.Tech</option>
+              <option value="mca">MCA</option>
+              <option value="mba">MBA</option>
+            </select>
+          </div>
+
+          <div>
+            <!-- Branch Dropdown -->
+            <label class="form-label">Branch</label>
+            <select
+              class="form-control rounded-4 shadow mb-2"
+              name="branch"
+              id="branch"
+            >
+              <option value="">-- Select Branch --</option>
+            </select>
+          </div>
+
+          <div>
+            <!-- Admission Year Dropdown -->
+            <label class="form-label">Admission Year</label>
+            <select
+              class="form-control rounded-4 shadow mb-2"
+              name="yearOfAdmission"
+            >
+              <% for(let i = 0; i < 6; i++) { %>
+              <option value="<%= new Date().getFullYear() + i %>">
+                <%= new Date().getFullYear() + i %>
+              </option>
+              <% } %>
+            </select>
+          </div>
+
+          <!-- Script for Dynamic Branch Dropdown -->
+          <script>
+            function showBranches(course) {
+              const branchSelect = document.getElementById("branch");
+              branchSelect.innerHTML =
+                '<option value="">-- Select Branch --</option>';
+
+              let branches = [];
+
+              if (course === "btech") {
+                branches = ["CSE", "ECE", "ME", "Civil", "IT"];
+              } else if (course === "mca") {
+                branches = ["Software Engineering", "Data Science", "AI & ML"];
+              } else if (course === "mba") {
+                branches = ["Finance", "HR", "Marketing"];
+              }
+
+              branches.forEach((branch) => {
+                let opt = document.createElement("option");
+                opt.value = branch;
+                opt.innerHTML = branch;
+                branchSelect.appendChild(opt);
+              });
+            }
+          </script>
+          <!-- dropdown code end -->
+
+        </div>
+         <div>
+                    <label class="form-label" >select student Image</label>
+                    <input type="file"  class="form-control rounded-4 shadow mb-2" name="studentImage" >
+        </div>
+        <input
+          type="submit"
+          value="AddStudent"
+          class="btn btn-primary w-100 my-2 rounded-4 shadow-lg"
+        />
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<%- include('./base/footer.ejs')%>
