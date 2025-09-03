@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  navbar-light text-light bg-dark">
+<!-- <nav class="navbar navbar-expand-lg  navbar-light text-light bg-dark">
   <div class="container">
     <a class="navbar-brand text-light" href="/home/admin/page">RDEC</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,13 +6,32 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="/student/add/page">AddStudent</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="/student/list/page">ListStudent</a>
-        </li>
+        
       </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="display: flex; justify-content: space-around;">
+    <div class="logo " style="z-index: 2;"><h3>EduPlatform</h3></div>
+    <div class="nav-item mw-3" style="list-style: none; display:flex; justify-content: space-between; gap: 15px; font-size: 18px; ">
+      <li class="nav-item" >
+        <a class="nav-link text-black" style="text-decoration: none; color: black;"  href="/home/admin/page">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link  " style="text-decoration: none; color: black;" aria-current="page" href="/student/add/page">AddStudent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " style="text-decoration: none; color: black;" href="/student/list/page">ListStudent</a>
+        </li class="nav-item">
+      <li><a class="nav-link"style="text-decoration: none; color: black;"  href="/">Courses</a>
+      </li>
+    </div>
+    <div class="ctanav " >
+       <!-- <a href="/login" class="btn btn-light">Login</a> -->
+       <a href="/" class="btn btn-danger" style=" text-decoration:none;">Log Out</a>
     </div>
   </div>
 </nav>

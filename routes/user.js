@@ -4,6 +4,9 @@ const userController=require('../controllers/UserController')
 
 
 router.get('/',(req,res)=>{
+    res.render('landingPage')
+})
+router.get('/login',(req,res)=>{
     res.render('home')
 })
 router.get('/user/signup',(req,res)=>{
