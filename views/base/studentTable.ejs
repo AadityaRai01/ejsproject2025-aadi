@@ -9,6 +9,7 @@
                 <th> Student Image </th>
                 <th> RollNo</th>
                 <th> Student Name</th>
+                <th> mother Name</th>
                 <th> Father Name</th>
                 <th>E-mail</th>
                 <th> Course</th>
@@ -28,6 +29,9 @@
                     </td>
                     <td>
                         <%= student.studentName %>
+                    </td>
+                    <td>
+                        <%= student.motherName %>
                     </td>
                     <td>
                         <%= student.fatherName %>
@@ -52,4 +56,53 @@
            <%  }) %>
         </tbody>
     </table>
+</div>
+<div class="container-fluid">
+    <div class="boxDiv w-100">
+    <% students.forEach((student)=>{ %>
+    <div class=" outerBox d-inline-block me-2 mt-5 border border-1 border-black rounded-2 overflow-hidden px-2" style=" width: 300px;">
+        <div class="inner rounded-3 bg-primary mx-auto my-2" style="height: 150px; width: 130px;">
+             <% if(student.studentImage){ %>
+                     <img src="<%= student.studentImage %>" class="rounded-3" alt="" height="150px" width="130px">
+                        <% }%>
+        </div>
+        <div class="rollno d-flex align-items-baseline gap-2">
+            <h5>Rollno:-</h5>
+            <h6><%= student.rollNo %></h6>
+        </div>
+        <div class="name d-flex align-items-baseline gap-2">
+            <h5>Name:-</h5>
+            <h6><%= student.studentName %></h6>
+        </div>
+        <div class="fname text-nowrap d-flex align-items-baseline gap-2 d-flex align-items-baseline gap-2">
+             <h5>mother's Name:-</h5>
+            <h6>Mr. <%= student.motherName %></h6>
+        </div>
+        <div class="fname text-nowrap d-flex align-items-baseline gap-2 d-flex align-items-baseline gap-2">
+             <h5>Father's Name:-</h5>
+            <h6>Mr. <%= student.fatherName %></h6>
+        </div>
+        <div class="email d-flex align-items-baseline gap-2">
+             <h5>Email:-</h5>
+            <h6><%= student.email %></h6>
+        </div>
+        <div class="course d-flex align-items-baseline gap-2">
+             <h5>Course:-</h5>
+            <h6><%= student.course %></h6>
+        </div>
+        <div class="branch text-nowrap d-flex align-items-baseline gap-2">
+            <h5>Branch:-</h5>
+            <h6><%= student.branch %></h6>
+        </div>
+        <div class="yoA d-flex align-items-baseline gap-2">
+             <h5>Year of Admission:-</h5>
+            <h6><%= student.yearOfAdmission %></h6>
+        </div>
+        <div class="buttons d-flex justify-content-around align-items-center mb-4">
+             <a href="/edit/student/page/<%= student._id %>" class="btn btn-warning"><i class="ri-edit-2-line"style="color: white;"></i></a>
+                        <a href="/delete/student/<%=  student._id %>" class="btn btn-danger"><i class="ri-delete-bin-line" style="color: white;"></i></a>
+        </div>
+    </div>
+    <%  }) %>
+    </div>
 </div>

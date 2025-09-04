@@ -99,6 +99,7 @@ async function editStudent(req,res) {
             // console.log(req.body)
             student.rollNo=req.body.rollNo
             student.studentName=req.body.studentName
+            student.studentName=req.body.motherName
             student.fatherName=req.body.fatherName
             student.course=req.body.course
             student.branch=req.body.branch
